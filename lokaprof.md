@@ -527,7 +527,7 @@
 	- All drawing on the canvas is done using JS
 	- **canvas is a raster image**
 * Registering events
-```
+```javascript
 	canvas.addEventListener('click', function () {
 		// Code ...
 	}, false);
@@ -784,7 +784,7 @@
 ### 4.2 Modular CSS
 
 * Zen Style
-	-
+
 ```CSS
 	#header {...}
 	#header img {...}
@@ -797,11 +797,12 @@
 	#header.collapsed {...}
 ```
 
-	- Problem?
-		+ Hard coupling of tags limits reusability
+* Problem?
+	- Hard coupling of tags limits reusability
 
 * Only use classes
 	- Separate tags from styles	
+
 ```CSS
 	.header {...}
 	.header .loge{...}
@@ -810,10 +811,10 @@
 	...
 ```
 
-	- Problem?
-		+ Nesting hurts performance
-		+ Class name conflicts
-		+ Composition conflicts
+* Problem?
+	- Nesting hurts performance
+	- Class name conflicts
+	- Composition conflicts
 
 * Modular styles
 	- Reusable
@@ -843,10 +844,10 @@
 	...
 ```
 
-	- Pro's
-		+ Minimal conflicts
-		+ Great selector performance
-		+ Scales to large project with multiple collaborators
+* Pro's
+	- Minimal conflicts
+	- Great selector performance
+	- Scales to large project with multiple collaborators
 
 ### 4.3 LESS / SASS
 
@@ -857,7 +858,7 @@
 	- Nesting
 	- Parent Selector
 	- Mixins
-	- 
+
 ```LESS
 	.size(@width; @height: auto) {
 		width: @width;
@@ -868,8 +869,8 @@
 	}
 ```
 
-	- Operators & Functions 
-	-
+* Operators & Functions 
+
 ```
 	@fontsize: 13px;
 	.box {
@@ -877,9 +878,9 @@
 	}
 ```
 
-	- `@import`
-		+ `@import "styles.css"`
-	- Extend (Inheritance)
+* `@import`
+	- `@import "styles.css"`
+* Extend (Inheritance)
 
 ```LESS
 	.clearfix() {
