@@ -68,13 +68,13 @@
 ### 1.4 Objects
 
 * new Object()
-```
+```javascript
 	var shape = new Object();
 	shape.color = "Red";
 ```
 
 * Constructor functions
-```
+```javascript
 	function Shape () { 
 		// Possibly some initialization code..
 		this.color = "Red";
@@ -83,7 +83,7 @@
 ```
 
 * Object literals
-```
+```javascript
 	var shape = {
 		color: "Red",
 		size: 10
@@ -95,7 +95,7 @@
 ```
 
 * Properties of class instances 
-```
+```javascript
 	var shape = new Shape();
 	shape.x = 10;
 	shape["y"] = 20; // also allowed.
@@ -106,7 +106,7 @@
  - if the constructor function is called without the *new* keyword, the context of the constructor (the object referred to by this) is the global object - the window object in web pages.
 
 * Adding functions to objects
-```
+```javascript
 	function Shape () {
 		// ...
 		this.GetArea = function () { 
@@ -115,7 +115,7 @@
 	}
 ```
 * or
-```
+```javascript
 	function Shape () {
 		// ...
 	}
@@ -132,7 +132,7 @@
 * JS is not a pure OOP language, but rather a hybrid language. 
 * Encapsulation
 	- Private and public member variables in JS using constructor functions:
-	```
+	```javascript
 		function Shape (x, y) {
 			this.x = x; // public
 			var privateY = y; // private 
@@ -449,7 +449,7 @@
 		+ it uses the Promise API, and adds `success() / error()`
 	- AngularJS defines the `$resource service`, which is specifically created to interact with a single resource in a REST service
 	- RESTangular project - very promising
-```
+```javascript
 	angular.module('MusicApp').factory('SongResource', ['$http', function($http){
 		return {
 			getSongs: function () {
@@ -540,14 +540,14 @@
 		+ `dblclick`
 * Drawing a rectangle
 	- `fillRect()`, `strokeRect()`, `clearRect()`
-```
+```javascript
 	context.fillStyle = 'blue';
 	context.fillRect(x, y, width, height);
 	context.strokeRect(x, y, width, height); // Drawing the outline
 ```
 
 * Drawing a line
-```
+```javascript
 	context.beginPath();
 	context.moveTo(x1, y1);
 	context.lineTo(x2, y2);
@@ -555,14 +555,14 @@
 ```
 
 * Drawing a circle
-```
+```javascript
 	context.beginPath();
 	context.arc(x, y, radius, 0, 2 * Math.PI, false );
 	context.stroke();
 ```
 
 * Drawing text
-```
+```javascript
 	context.strokeText();
 	context.fillText();
 	context.measureText();
@@ -664,7 +664,7 @@
 		+ return latitude/longitude coordinates (and more information)
 	- is an opt-in service
 	- async method, accepts a callback parameter
-```
+```javascript
 	if ( navigator.geolocation ) {
 		navigator.geolocation.getCurrentPosition(onGetPos);
 	}
@@ -679,7 +679,7 @@
 	- should **never** touch the DOM
 	- communication between the main code and the worker must happen using `postMessage()`
 	- get a copy of the data being sent to them
-```
+```javascript
 	var worker = new Worker('ProcessData.js');
 	worker.onmessage = function(e) { 
 		console.log(e.data);
@@ -710,14 +710,14 @@
 	- the event gives us alpha, beta and gamma values
 * Fullscreen
 	-
-```
+```javascript
 	if (document.documentElement.requestFullScreen) {
 		document.documentElement.requestFullScreen();
 	}
 ```
 
 * Page Visibility
-```
+```javascript
 	document.addEventListener('visibilityChange', function (e) {
 		if (document.hidden){
 			// Stop fetching some updates...
@@ -784,7 +784,7 @@
 
 * Zen Style
 	-
-```css
+```CSS
 	#header {...}
 	#header img {...}
 	#header h1 {...}
@@ -862,6 +862,7 @@
 		.size(600px);
 	}
 ```
+
 	- Operators & Functions
 ```LESS
 	@fontsize: 13px;
@@ -869,8 +870,10 @@
 		font-size: (@fontsize * 1.2);
 	}
 ```
+
 	- `@import`
 		+ `@import "styles.css"`
+
 	- Extend (Inheritance)
 ```LESS
 .clearfix() {
