@@ -699,7 +699,7 @@
 	- Property of the `window` object
 * Battery Status
 	- Property of the `navigator` object
-```
+```javascript
 	if (navigator.battery) {
 		console.log('Is charing? ' + navigator.battery.charing);
 		console.log('Level ' + navigator.battery.level);
@@ -796,6 +796,7 @@
 
 	#header.collapsed {...}
 ```
+
 	- Problem?
 		+ Hard coupling of tags limits reusability
 
@@ -808,6 +809,7 @@
 	.header .title .text {...}
 	...
 ```
+
 	- Problem?
 		+ Nesting hurts performance
 		+ Class name conflicts
@@ -840,6 +842,7 @@
 	.Header-title-text {...}
 	...
 ```
+
 	- Pro's
 		+ Minimal conflicts
 		+ Great selector performance
@@ -854,6 +857,7 @@
 	- Nesting
 	- Parent Selector
 	- Mixins
+	- 
 ```LESS
 	.size(@width; @height: auto) {
 		width: @width;
@@ -864,8 +868,9 @@
 	}
 ```
 
-	- Operators & Functions
-```LESS
+	- Operators & Functions 
+	-
+```
 	@fontsize: 13px;
 	.box {
 		font-size: (@fontsize * 1.2);
@@ -874,15 +879,15 @@
 
 	- `@import`
 		+ `@import "styles.css"`
-
 	- Extend (Inheritance)
+
 ```LESS
-.clearfix() {
-	// ..
-}
-.grind:extend(.clearfix) {
-	border: 1px solid #333;
-}
+	.clearfix() {
+		// ..
+	}
+	.grind:extend(.clearfix) {
+		border: 1px solid #333;
+	}
 ```
 
 * Less
