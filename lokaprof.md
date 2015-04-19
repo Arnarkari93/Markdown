@@ -532,6 +532,7 @@
 		// Code ...
 	}, false);
 ```
+
 	- Mouse events:
 		+ `mousedown` / `mouseup`
 		+ `mousemove`
