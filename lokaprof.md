@@ -533,12 +533,12 @@
 	}, false);
 ```
 
-	- Mouse events:
-		+ `mousedown` / `mouseup`
-		+ `mousemove`
-		+ `mouse over` / `mouseout`
-		+ `click`
-		+ `dblclick`
+* Mouse events:
+	- `mousedown` / `mouseup`
+	- `mousemove`
+	- `mouse over` / `mouseout`
+	- `click`
+	- `dblclick`
 * Drawing a rectangle
 	- `fillRect()`, `strokeRect()`, `clearRect()`
 ```javascript
